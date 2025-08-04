@@ -160,14 +160,13 @@ const NavButton = styled(motion(Button))(({ theme }) => ({
 const MotionAppBar = motion(AppBar);
 
 const navItems = [
-  { label: 'Home', href: '#home' }, // Unique hrefs for keys
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'Skills', href: '/skills' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
 ];
-
 export default function Navbar() {
   // Theme is now static, no need for mode state or ColorModeContext
   const theme = useMemo(() => getAppTheme(), []);
