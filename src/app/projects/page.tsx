@@ -215,7 +215,7 @@ const projects = [
 ];
 
 // --- ProjectSection Component ---
-export default function ProjectSection() {
+export default function Project() {
   // Theme is static (dark mode)
   const theme = useMemo(() => getAppTheme(), []);
 

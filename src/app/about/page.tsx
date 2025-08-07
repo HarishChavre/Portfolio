@@ -150,7 +150,7 @@ const itemVariants = {
   },
 };
 
-export default function AboutPage() {
+export default function About() {
   const theme = useMemo(() => getAppTheme(), []);
   const canvasRef = useRef(null);
   const animationFrameId = useRef(null);

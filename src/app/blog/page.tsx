@@ -379,7 +379,7 @@ const blogPosts = [
 ];
 
 // --- BlogPage Component ---
-export default function BlogPage() {
+export default function Blog() {
   const theme = useMemo(() => getAppTheme(), []);
 
   const canvasRef = useRef(null);

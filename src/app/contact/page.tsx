@@ -180,7 +180,7 @@ const contactInfo = {
 };
 
 // --- ContactSection Component ---
-export default function ContactSection() {
+export default function Contact() {
   const theme = useMemo(() => getAppTheme(), []);
 
   const canvasRef = useRef(null);

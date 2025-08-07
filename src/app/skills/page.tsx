@@ -14,6 +14,8 @@ import { motion } from 'framer-motion';
 // Import Three.js for the background
 import * as THREE from 'three';
 
+const MotionBox = motion.create(Box);
+
 // --- Theme Context and Setup (unchanged from previous version) ---
 export const ColorModeContext = createContext({ toggleColorMode: () => {}, mode: 'dark' });
 
@@ -69,7 +71,7 @@ const ThreeCanvas = styled('canvas')({
   pointerEvents: 'none',
 });
 
-const ContentBox = styled(motion(Box))(({ theme }) => ({
+const ContentBox = styled(MotionBox)(({ theme }) => ({
   position: 'relative',
   zIndex: 1,
   maxWidth: '1200px',
@@ -86,7 +88,7 @@ const ContentBox = styled(motion(Box))(({ theme }) => ({
     : '0 15px 40px rgba(0,0,0,0.2), 0 0 25px rgba(0,0,0,0.08)',
 }));
 
-const SkillCard = styled(motion(Box))(({ theme }) => ({
+const SkillCard = styled(MotionBox)(({ theme }) => ({
   background: theme.palette.mode === 'dark'
     ? theme.palette.background.paper
     : theme.palette.grey[50],
@@ -113,7 +115,7 @@ const SkillCard = styled(motion(Box))(({ theme }) => ({
   minHeight: 180, // Ensure a consistent card height
 }));
 
-const SkillIconWrapper = styled(motion(Box))(({ theme }) => ({
+const SkillIconWrapper = styled(MotionBox)(({ theme }) => ({
   width: 80, // Larger icon size
   height: 80,
   borderRadius: '50%',
@@ -185,7 +187,7 @@ const skills = [
 ];
 
 // --- SkillSection Component ---
-export default function SkillSection() {
+export default function Skills() {
   const [mode, setMode] = useState('dark');
   const theme = useMemo(() => getAppTheme(mode), [mode]);
   const canvasRef = useRef(null);
